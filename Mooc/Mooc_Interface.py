@@ -29,13 +29,10 @@ courses_mooc = {
 def mooc_interface():
     try:
         while True:
-            os.system("cls")
+            #os.system("clear")
             print("\t"+"="*91)
-            print('\t|\t\t      慕课下载器(免费版v3.4.2)      \tQQ群: {:^27s} |'.format(__QQgroup__))
-            print("\t|\t\t    icourse163.org, icourses.cn    \t邮箱: {:^27s} |".format(__email__))
-            print("\t"+"="*91)
-            print("\t{:^90}".format("Github: https://github.com/PyJun/Mooc_Downloader"))
-            print("\t{:^90}".format("博客: https://blog.csdn.net/qq_16166591/article/details/85249743"))
+            print("\t{:^90}".format("Github: https://github.com/southern-dust/Mooc_Downloader"))
+            print("\t{:^90}".format("ForkedFrom: https://github.com/PyJun/Mooc_Downloader"))
             print("\t{:^90}".format("下载路径: "+PATH))
             urlstr = None
             while not urlstr:
@@ -89,10 +86,8 @@ def mooc_interface():
                     return
     except KeyboardInterrupt:
         input("程序退出...")
-    finally:
-        if (input("\n小哥哥，小姐姐，打个赏再走呗 …(⊙_⊙)… [y/n]: ") != 'n'):
-            os.startfile(alipay_path)
-        os.system("pause")
+        
+    os.system("pause")
 
 def inquire():
     redown = None
