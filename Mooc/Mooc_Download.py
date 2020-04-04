@@ -22,6 +22,7 @@ def aria2_download_file(url, filename, dirname='.'):
     cnt = 0
     while cnt < 3:
         try:
+            #print('url: %s\n',url)
             cmd = aira2_cmd.format(url=url, dirname=dirname, filename=filename)
             p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, universal_newlines=True, encoding='utf8')
             lines = ''

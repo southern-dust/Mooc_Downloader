@@ -33,7 +33,8 @@ if getattr(sys, 'frozen', False): #是否打包
     aria2_path = os.path.join(sys._MEIPASS, "aria2c")
 else:
     aria2_path = "aria2c"
-aira2_cmd = '%s -x 16 -s 64 -j 64 -k 2M --disk-cache 128M --max-overall-download-limit %s "{url:}" -d "{dirname:}" -o "{filename:}"'%(aria2_path, download_speed)
+#aira2_cmd = '%s -x 16 -s 64 -j 64 -k 2M --disk-cache 128M --max-overall-download-limit %s "{url:}" -d "{dirname:}" -o "{filename:}"'%(aria2_path, download_speed)
+aira2_cmd = '%s -x 16 -s 64 -j 64 -k 2M --disk-cache 128M "{url:}" -d "{dirname:}" -o "{filename:}"'%(aria2_path)
 
 # 课程链接的正则匹配
 courses_re = {
